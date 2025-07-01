@@ -1,0 +1,97 @@
+Create an interactive web app that analyzes a website's SEO meta tags. The app should fetch a page's HTML and visually display important SEO tags like <title>, <meta name="description">, Open Graph, and Twitter Cards. It should also provide a simulated preview of how the site looks in Google Search and on social media, with an overall SEO score out of 100.
+
+🎯 Project Goals
+Let users input any public website URL
+
+Fetch and parse the HTML from that URL
+
+Extract core SEO tags (title, description, Open Graph, Twitter)
+
+Provide a visual preview of how the site looks on:
+
+Google Search
+
+Facebook / LinkedIn (Open Graph)
+
+Twitter (Twitter Card)
+
+Assign an SEO score out of 100 based on tag presence & quality
+
+Provide clear feedback for any missing or weak tags
+
+🧰 Suggested Tech Stack
+Frontend: HTML + CSS + JavaScript (or React)
+
+Backend: Node.js + Express (to handle URL requests + parsing)
+
+HTML Parsing: Cheerio or JSDOM
+
+Preview Rendering: Custom styled components
+
+🪜 Step-by-Step Milestones
+UI Input
+
+Create a basic form where users can paste a URL
+
+Add a button to trigger analysis
+
+HTML Fetching
+
+Use fetch (or axios + CORS proxy) on the backend to get the site’s HTML
+
+Tag Parsing
+
+Parse HTML for:
+
+<title>
+
+<meta name="description">
+
+<meta name="robots">
+
+<link rel="canonical">
+
+<meta property="og:*">
+
+<meta name="twitter:*">
+
+Scoring System
+
+Assign points for each tag’s presence and best practice (length, uniqueness)
+
+Show a score out of 100
+
+Visual Preview
+
+Build a Google-style search snippet UI
+
+Create mockups of Facebook/Twitter cards based on extracted tags
+
+Feedback Display
+
+Show messages like:
+
+✅ Title tag is present and well-formed
+
+⚠️ Description missing or too short
+
+❌ Missing Open Graph image
+
+✅ Stretch Goals (Post-MVP)
+(Optional – do this only if MVP is complete)
+
+Export the report as JSON or PDF
+
+Allow comparison between multiple URLs
+
+Enable dark mode
+
+🚀 Start Building Now
+Click "Fork Replit" and start with a basic Node.js + HTML template.
+
+Need a jumpstart? Use Replit’s “Node.js with Express” template and install cheerio:
+
+bash
+Copy
+Edit
+npm install cheerio axios
